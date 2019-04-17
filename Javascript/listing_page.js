@@ -1,6 +1,8 @@
+//create range slider
 $("#distance-slider").slider({});
 $("#price-slider").slider({});
 
+//create calendar
 YUI().use('calendar', function (Y) {
         var calendar = new Y.Calendar({
                 contentBox: "#mycalendar",
@@ -38,3 +40,5 @@ function getDates(startDate, stopDate) {
         }
         return dateArray;
 }
+
+//create list item
