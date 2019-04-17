@@ -1,0 +1,26 @@
+html {
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+margin: 0px;
+min-height: 100%;
+width: 100%;
+}
+
+#search-box {
+    width: 240px;
+}
+
+.slider-handle {
+    background: #ffffff;
+    border: 1px solid #cfd7de;
+    opacity: 1;
+    outline: none
+}
+
+.slider-selection {
+    background: blue;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Listing Page</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.1/css/bootstrap-slider.css"/>
+
+    <link rel="stylesheet" href="CSS/listing_page.css" />
+  </head>
+
+  <body class="bg-light yui3-skin-sam">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white px-5 border-bottom box-shadow mb-2">
+            <img class="navbar-brand mr-5" src="Assets/icons/logo.png" />
+            <div id="search-box" class=" input-group">
+                <input type="text" class="form-control" placeholder="Zip Code" />
+                <span class="input-group-append">
+                    <button class="btn btn-primary" type="button">
+                        <img src="./Assets/icons/search_icon.png" />
+                    </button>
+                </span>
+            </div>
+            <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="navbar-text">About Us</a>
+                    </li>
+                    <li class="nav-item mx-4 my-auto">
+                        <img src="Assets/icons/setting_icon.png" />
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="row">
+        <div class="col-3 card ml-4 mr-3 py-5" style="min-width: 450px" style="position: fixed">
+            <div class="mx-auto my-3">
+                <div class="row">
+                    <span class="col d-flex justify-content-start" style="font-size:14px; font-style: oblique">10 miles</span>
+                    <span class="col d-flex justify-content-end" style="font-size:14px; font-style: oblique">500 miles</span>
+                </div>
+                <div class="row slider slider-horizontal mx-4">
+                    <input id="distance-slider" type="text" class="col span2" value="" data-slider-min="10" 
+                        data-slider-max="500" data-slider-step="5" data-slider-value="[0,250]" data-slider-tooltip="show"/>
+                </div>
+                <div class="row mt-1" style="font-size:18px; font-weight: bold">
+                    <span class="mx-auto">Distance</span>
+                </div>
+            </div>
+            <div class="mx-auto my-3">
+                <div class="row">
+                    <span class="pt-1" style="font-size:14px; font-weight: italic">$10</span>
+                    <div class="slider slider-horizontal mx-4">
+                        <input id="price-slider" type="text" class="col span2" value="" data-slider-min="10" 
+                            data-slider-max="500" data-slider-step="5" data-slider-value="[0,250]" data-slider-tooltip="show"/>
+                    </div>
+                    <span class="pt-1" style="font-size:14px; font-weight: italic">$500</span>
+                </div>
+                <div class="row mt-1" style="font-size:18px; font-weight: bold">
+                    <span class="mx-auto">Price</span>
+                </div>
+            </div>
+            <div id="mycalendar" class="mx-auto"></div>
+        </div>
+
+        <div class="col-8">
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.1/bootstrap-slider.min.js"></script>
+    <script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
+
+    <script src="Javascript/listing_page.js"></script>
+  </body>
+</html>
