@@ -18,25 +18,20 @@ YUI().use('calendar', function (Y) {
 
         let lastSelectedDate = new Date();
         calendar.on("dateClick", function (e) {
-                console.log(e.date);
                 let temp = e.date;
                 calendar.selectDates(getDates(lastSelectedDate, e.date));
-                console.log(temp);
                 lastSelectedDate = temp;
         });
 });
 
 function getDates(startDate, stopDate) {
-        console.log(startDate, stopDate);
         if (startDate > stopDate) {
                 let temp = startDate;
                 startDate = stopDate;
                 stopDate = temp;
         }
-        console.log(startDate, stopDate);
-        console.log("x");
         var dateArray = new Array();
-        var currentDate = startDate;
+        var currentDate = new Date(startDate);
         while (currentDate <= stopDate) {
                 dateArray.push(new Date(currentDate));
                 currentDate.setDate(currentDate.getDate() + 1);

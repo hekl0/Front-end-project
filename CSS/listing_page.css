@@ -24,3 +24,9 @@ width: 100%;
 .slider-selection {
     background: blue;
 }
+
+.btn-color {
+    color: #000000;
+    background-color: #ffffff;
+    border-color: #6c757d;
+}
