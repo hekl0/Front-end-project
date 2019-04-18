@@ -30,3 +30,32 @@ width: 100%;
     background-color: #ffffff;
     border-color: #6c757d;
 }
+
+.checked {
+    color: orange;
+}
+
+.fa-star {
+    font-size: 2.00em;
+}
+
+.price-tag {
+    font-size: 35px;    
+}
+
+.hoverable {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.hoverable:hover {
+    -webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 0px 0px 0 rgba(0, 0, 0, 0.19);
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
