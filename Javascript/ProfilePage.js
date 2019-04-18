@@ -1,14 +1,37 @@
-var bodyTag,bigdiv,select1,select2,select3,img,pls,email,yourname,submitbtn;
+YUI().use('calendar', function (Y) {
+    var calendar = new Y.Calendar({
+            contentBox: "#mycalendar",
+            height: '300px',
+            width: '400px',
+            showPrevMonth: true,
+            showNextMonth: true,
+            date: new Date(),
+            selectionMode: "single",
+    });
+    calendar.render();
+    $(".yui3-widget").addClass("mx-auto");
 
-window.onload = function() {
-    bodyTag = document.getElementsByTagName("body")[0];
-    heading = document.getElementById("profileName");
-    console.log(heading);
-}
+    calendar.selectDates(new Date());
 
-function prepInputTag() {
-    email = document.createElement("input");
-    yourname = document.createElement("input");
-    email.setAttribute("placeholder","Enter your email to order the car");
-    yourname.setAttribute("placeholder","Your name");
+    let lastSelectedDate = new Date();
+    calendar.on("dateClick", function (e) {
+            let temp = e.date;
+            calendar.selectDates(getDates(lastSelectedDate, e.date));
+            lastSelectedDate = temp;
+    });
+});
+
+function getDates(startDate, stopDate) {
+    if (startDate > stopDate) {
+            let temp = startDate;
+            startDate = stopDate;
+            stopDate = temp;
+    }
+    var dateArray = new Array();
+    var currentDate = new Date(startDate);
+    while (currentDate <= stopDate) {
+            dateArray.push(new Date(currentDate));
+            currentDate.setDate(currentDate.getDate() + 1);
+    }
+    return dateArray;
 }
