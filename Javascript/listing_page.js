@@ -92,3 +92,9 @@ createListingItem({
         desciprtion: "Testing",
         price: "25"
 });
+
+//function for dropdown
+$("#dropdownMenu .dropdown-menu a").click(function(){
+        $("#dropdownMenu .btn").text($(this).text());
+        $("#dropdownMenu .btn").val($(this).text());
+});
