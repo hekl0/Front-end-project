@@ -19,14 +19,6 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-white px-5 border-bottom box-shadow mb-2">
             <img class="navbar-brand mr-5" src="Assets/icons/logo.png" />
-            <div id="search-box" class="input-group">
-                <input type="text" class="form-control" placeholder="Zip Code" />
-                <span class="input-group-append">
-                    <button class="btn btn-primary" type="button">
-                        <img src="./Assets/icons/search_icon.png" />
-                    </button>
-                </span>
-            </div>
             <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item zoom">
@@ -43,16 +35,19 @@
         </nav>
     </header>
 
-    <div style="display: table-row; height: 100%">
-        <div class="mx-auto my-auto" style="width: fit-content">
-            <h1 class="display-4">Hello, world!</h1>
-            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-            <hr class="my-4">
-            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-            <p class="lead">
-                <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-            </p>
-        </div>
+    <div class="center-screen">
+            <h1 class="display-4 mb-5">Find a trust worthy person<br>to take care of thing you have</h1>
+            <div id="search-box-lg" class="input-group input-group-lg custom-shadow">
+                <input type="text" class="form-control border-right-0 border" placeholder="Zip Code or Address" id="search"/>
+                <span class="input-group-append">
+                    <div class="input-group-text bg-white">
+                        <img src="./Assets/icons/search_icon_lg.png" class="btn-img"/>
+                    </div>
+                    <!-- <button class="btn btn-outline-primary border-left-0 border" type="button">
+                        <img src="./Assets/icons/search_icon.png" />
+                    </button> -->
+                </span>
+            </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
