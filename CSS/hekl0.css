@@ -11,17 +11,17 @@ width: 100%;
 }
 
 #search-box {
-    width: 240px;
+    width: 12%;
 }
 
 #search-box-lg {
     width: 30%;
-    height: 60px !important;
+    height: 8vh !important;
 }
 
 #search-box-lg .input-group-append .input-group-text {
     border-radius: 0px 100px 100px 0px;
-    padding-right: 20px;
+    padding-right: 25px;
 }
 
 #search-box-lg .form-control {
@@ -30,6 +30,7 @@ width: 100%;
     padding-left: 30px;
     padding-top: 30px;
     padding-bottom: 30px;
+    /* font-size: 30px; */
 }
 
 .slider-handle {
@@ -104,7 +105,7 @@ width: 100%;
 }
 
 .nav-item .btn {
-    width: 100px;
+    width: 5vw;
 }
 
 .center-screen {
@@ -132,7 +133,7 @@ width: 100%;
     border-color: #80bdff;
     outline: 0;
     border-radius: 100px;
-    box-shadow: 5px 5px 5px .1rem rgba(0, 123, 255, 0.25);
+    box-shadow: 5px 5px 5px 0 rgba(0, 123, 255, 0.25);
 }
 
 .custom-shadow:hover {

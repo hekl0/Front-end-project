@@ -1,6 +1,7 @@
 //create range slider
-$("#distance-slider").slider({});
-$("#price-slider").slider({});
+let distance_slider = $("#distance-slider").slider({}).data('slider');
+let price_slider = $("#price-slider").slider({}).data('slider');
+//distance_slider.getValue()
 
 //create calendar
 YUI().use('calendar', function (Y) {
@@ -18,31 +19,25 @@ YUI().use('calendar', function (Y) {
 
         calendar.selectDates(new Date());
 
-        let lastSelectedDate = new Date();
-        let lastSelectedDateArr = [];
+        let selectedDateArr = [new Date()];
         calendar.on("dateClick", function (e) {
-                console.log(e.date);
-                let temp = e.date;
+                let lastSelectedDateArr = selectedDateArr.slice();
+                let dateClicked = new Date(e.date);
+                let index = findIndexOfDate(dateClicked, selectedDateArr);
+                if (index >= 0) 
+                        selectedDateArr.splice(index, 1);
+                else
+                        selectedDateArr.push(dateClicked);
                 calendar.deselectDates(lastSelectedDateArr);
-                calendar.selectDates(getDates(lastSelectedDate, e.date));
-                lastSelectedDateArr = getDates(lastSelectedDate, e.date);
-                lastSelectedDate = temp;
+                calendar.selectDates(selectedDateArr);
         });
 });
 
-function getDates(startDate, stopDate) {
-        if (startDate > stopDate) {
-                let temp = startDate;
-                startDate = stopDate;
-                stopDate = temp;
-        }
-        var dateArray = new Array();
-        var currentDate = new Date(startDate);
-        while (currentDate <= stopDate) {
-                dateArray.push(new Date(currentDate));
-                currentDate.setDate(currentDate.getDate() + 1);
-        }
-        return dateArray;
+function findIndexOfDate(date, arr) {
+        for (let i = 0; i < arr.length; i++)
+                if (arr[i].getDate() == date.getDate() && arr[i].getMonth() == date.getMonth() && arr[i].getFullYear() == date.getFullYear())
+                        return i;
+        return -1;
 }
 
 //create list item
