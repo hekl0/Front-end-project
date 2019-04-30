@@ -1,3 +1,25 @@
+::-webkit-scrollbar {
+    width: 8px; 
+    background-color: rgba(0,0,0,0);
+    -webkit-border-radius: 100px;
+}
+
+::-webkit-scrollbar:hover {
+    background-color: rgba(0, 0, 0, 0.09);
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    background: rgba(0,0,0,0.3);
+    -webkit-border-radius: 100px;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb:vertical:active {
+    background: rgba(0,0,0,0.61);
+    -webkit-border-radius: 100px;
+}
+
 html {
     margin: 0px;
     height: 100%;
@@ -5,10 +27,18 @@ html {
 }
 
 body {
-margin: 0px;
-min-height: 100%;
-width: 100%;
+    margin: 0px;
+    min-height: 100%;
+    width: 100%;
 }
+
+textarea {
+    resize: none
+}
+
+p {
+    word-break: break-word;
+}    
 
 #search-box {
     width: 12%;
@@ -147,4 +177,98 @@ width: 100%;
     outline: 0;
     border-radius: 100px;
     box-shadow: 5px 5px 5px 0 rgba(0, 123, 255, 0.25);
+}
+
+.border-right {
+    border-right: 1px solid #dee2e6;
+}
+
+.border-left {
+    border-left: 1px solid #dee2e6;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #dee2e6;
+}
+
+.split-left {
+    height: 100%;
+    width: 20%;
+    left: 0;
+    position: fixed;
+}
+
+.split-right {
+    height: 100%;
+    width: 80%;
+    right: 0;
+    position: fixed;
+}
+
+.split-top {
+    position: absolute;
+    top: 0;
+    height: 77%;
+    width: 100%;
+}
+
+.split-bottom {
+    position: fixed;
+    bottom: 0;
+    height: 12%;
+    width: 80%;
+}
+
+.icon-size {
+    width: 16px;
+    height: 16px;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.chat-chosen {
+    background-color: rgba(0, 0, 0, .05);
+}
+
+.chat-item:hover {
+    background-color: rgba(0, 0, 0, .05);
+}
+
+.autoscroll {
+    overflow: hidden;
+}
+
+.autoscroll:hover {
+    overflow: auto;
+}
+
+.hiddenscroll {
+    overflow: auto;
+}
+
+.hiddenscroll::-webkit-scrollbar {
+    width: 0px;  
+    background: transparent; 
+}
+
+#chat-box {
+    width: 80%;
+    height: 80%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#send-button {
+    left: 60%;
+}
+
+.message-box {
+    max-width: 80%;
+}
+
+.message {
+    margin-left: 100px;
+    margin-top: -10px;
 }
