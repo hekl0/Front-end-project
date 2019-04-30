@@ -31,8 +31,15 @@
                     <li class="nav-item zoom">
                         <a class="navbar-text not-href" href="#">About Us</a>
                     </li>
-                    <li class="nav-item mx-4 my-auto zoom btn">
-                        <img src="Assets/icons/setting_icon.png" />
+                    <li class="nav-item mx-4 my-auto dropdown">
+                        <a class="nav-link dropdown-toggle dropdown-toggle-no-arrow" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="">
+                            <img src="Assets/icons/setting_icon.png" />
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -49,7 +56,7 @@
                     </div>
                     <div class="row slider slider-horizontal mx-4">
                         <input id="distance-slider" type="text" class="col span2" value="" data-slider-min="10" 
-                            data-slider-max="500" data-slider-step="5" data-slider-value="[0,250]" data-slider-tooltip="show"/>
+                            data-slider-max="500" data-slider-step="5" data-slider-value="250" data-slider-tooltip="show"/>
                     </div>
                     <div class="row mt-1" style="font-size:18px; font-weight: bold">
                         <span class="mx-auto">Distance</span>
@@ -69,7 +76,7 @@
                     </div>
                 </div>
                 <div class="dropdown mx-auto mt-3 mb-4"  id="dropdownMenu">
-                    <button class="btn btn-color dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown button</button>
+                    <button class="btn btn-color dropdown-toggle dropdown-toggle-fixed-width" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown button</button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item" href="#">Action1</a>
                         <a class="dropdown-item" href="#">Action2</a>
@@ -77,7 +84,7 @@
                     </div>
                 </div>
                 <div class="dropdown mx-auto mt-3 mb-4">
-                    <button class="btn btn-color dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown button</button>
+                    <button class="btn btn-color dropdown-toggle dropdown-toggle-fixed-width" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown button</button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item" href="#">Action1</a>
                         <a class="dropdown-item" href="#">Action2</a>
