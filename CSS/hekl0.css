@@ -79,8 +79,12 @@ width: 100%;
     transition: all 0.3s ease-in-out;
 }
 
-.dropdown-toggle {
-    min-width: 10rem;
+.dropdown-toggle-no-arrow::after {
+    display:none;
+}
+
+.dropdown-toggle-fixed-width {
+    min-width: 8vw;
 }
 
 .zoom {
