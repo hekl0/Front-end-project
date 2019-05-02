@@ -1,40 +1,39 @@
 YUI().use('calendar', function (Y) {
-    var calendar = new Y.Calendar({
-            contentBox: "#mycalendar",
-            height: '300px',
-            width: '400px',
-            showPrevMonth: true,
-            showNextMonth: true,
-            date: new Date(),
-            selectionMode: "single",
-    });
-    calendar.render();
-    $(".yui3-widget").addClass("mx-auto");
+        var calendar = new Y.Calendar({
+                contentBox: "#mycalendar",
+                height: '300px',
+                width: '400px',
+                showPrevMonth: true,
+                showNextMonth: true,
+                date: new Date(),
+                selectionMode: "single",
+        });
+        calendar.render();
+        $(".yui3-widget").addClass("mx-auto");
 
-    calendar.selectDates(new Date());
+        calendar.selectDates(new Date());
 
-    let lastSelectedDate = new Date();
-    calendar.on("dateClick", function (e) {
-            let temp = e.date;
-            calendar.selectDates(getDates(lastSelectedDate, e.date));
-            lastSelectedDate = temp;
-    });
+        let selectedDateArr = [new Date()];
+        calendar.on("dateClick", function (e) {
+                let lastSelectedDateArr = selectedDateArr.slice();
+                let dateClicked = new Date(e.date);
+                let index = findIndexOfDate(dateClicked, selectedDateArr);
+                if (index >= 0) 
+                        selectedDateArr.splice(index, 1);
+                else
+                        selectedDateArr.push(dateClicked);
+                calendar.deselectDates(lastSelectedDateArr);
+                calendar.selectDates(selectedDateArr);
+        });
 });
 
-function getDates(startDate, stopDate) {
-    if (startDate > stopDate) {
-            let temp = startDate;
-            startDate = stopDate;
-            stopDate = temp;
-    }
-    var dateArray = new Array();
-    var currentDate = new Date(startDate);
-    while (currentDate <= stopDate) {
-            dateArray.push(new Date(currentDate));
-            currentDate.setDate(currentDate.getDate() + 1);
-    }
-    return dateArray;
+function findIndexOfDate(date, arr) {
+        for (let i = 0; i < arr.length; i++)
+                if (arr[i].getDate() == date.getDate() && arr[i].getMonth() == date.getMonth() && arr[i].getFullYear() == date.getFullYear())
+                        return i;
+        return -1;
 }
+
 
 
 function fillInProfilePage(user) {
